@@ -1,4 +1,6 @@
-﻿class Program
+﻿using System.ComponentModel.DataAnnotations;
+
+class Program
 {
     public static void Main(String[] args)
     {
@@ -17,5 +19,19 @@
 
         double srednia = suma / tab.Length;
         return srednia;
+    }
+
+    static int maksymalna(int[] tab)
+    {
+        int max = tab[0];
+        for (int i = 1; i < tab.Length - 2; i++)
+        {
+            if (tab[i] > max)
+            {
+                max = tab[i];
+            }
+        }
+
+        return max;
     }
 }
